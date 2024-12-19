@@ -92,7 +92,7 @@
                     ninja
                     ccache
                     libffi
-                    libusb
+                    libusb1
                     dfu-util
                     python3Packages.pip
                     python3Packages.virtualenv
