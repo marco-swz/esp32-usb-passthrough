@@ -1,0 +1,25 @@
+[package]
+name = "lora-rs"
+version = "0.1.0"
+authors = ["Marco Schwarz <marco.swz@hotmail.com>"]
+edition = "2021"
+resolver = "2"
+rust-version = "1.81"
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true    # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+
+[dependencies]
+esp-hal = { version = "0.20.1", features = ["esp32c3"] }
+esp-backtrace = { version = "0.14.0", features = [
+    "esp32c3",
+    "panic-handler",
+    "exception-handler",
+    "println",
+] }
+esp-println = { version = "0.11.0", features = ["esp32c3"] }
+
